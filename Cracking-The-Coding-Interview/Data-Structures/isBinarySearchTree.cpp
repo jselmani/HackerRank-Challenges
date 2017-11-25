@@ -30,6 +30,16 @@ The Node struct is defined as follows:
 	Node* left;
 	Node* right;
 };
+
+Proposed Solution - O(n) Time Complexity
+
+Traverse through tree and store data values in an array.  If they are sorted, the tree is a BST.
+We start from the ROOT and we work our way down the tree, strictly going to the left first of every node.
+By doing so, we traverse to the bottom of the tree.  Once we reach a NULL value, we return and then push
+the data of that node into the array.
+
+This is a recursive solution that ensures that the nodes are sorted in ascending order.  If they do not, 
+the BST does not meet criteria of the problem and STDOUT displays NO.
 */
 
 vector<int> nodeList;
